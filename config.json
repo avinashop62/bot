@@ -1,0 +1,19 @@
+{
+  "TOKEN": "7293372967:AAHnEkrXycJJj9fHAr9Ez0yIKwFXTpAM430",
+  "ADMIN_USER_ID": 6484788124,
+  "CHANNELS": [
+    "@botpaymentreq"
+  ],
+  "API_URL": "https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json",
+  "BASE_PRICE": 100,
+  "REGISTER_LINK": "https://bdgwina.biz//#/register?invitationCode=2531230937",
+  "WIN_MEDIA_ID": "CAACAgEAAxkBAAID8GjK1B1_hO8hCV2k-vqzlEjQP94CAAJoAANDaphOe0C_EmvRbLc2BA",
+  "LOSE_MEDIA_ID": "CAACAgUAAxkBAAID82jK1FLtld7-cHZu87asRiccp6geAAIzEAACLetgVVfiN3gr0OV9NgQ",
+  "PREDICTION_TEMPLATE": "<b>Bᴅɢ Wɪɴ 24/7 Aɪ Pʀᴇᴅɪᴄᴛɪᴏɴ</b>\n\n<blockquote>🆔 <b>Pᴇʀɪᴏᴅ:-</b> <code>{period}</code>\n🎲 <b>Iɴᴠᴇꜱᴛ:-</b> <b>{choice}</b>\n💎 <b>Mᴜʟᴛɪᴩʟʏ:-</b> <b>{multiplier}x</b>\n💰 <b>Pᴜʀᴄʜᴀꜱᴇ Pʀɪᴄᴇ:-</b> ₹{price}</blockquote>\n\n<b>Fʀᴇᴇ Gɪꜰᴛ Cᴏᴅᴇ:-</b> @freeGiftCodeStoreeBot\n\n<a href=\"{register_link}\"><b>👉 Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Gᴇᴛ Bᴏɴᴜꜱ 👈</b></a>",
+  "WIN_TEMPLATE": "✅ <b>Wɪɴ</b> ✅\n\n🎉 Cᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ! 🚀\n\n<b>Period:</b> <code>{period}</code>\n<b>Result:</b> <b>{result}</b>",
+  "LOSE_TEMPLATE": "\n❌❌❌ <b>LOSS</b> ❌❌❌\n\nDon't worry, we'll recover in the next one!\n\n<b>Period:</b> <code>{period}</code>\n<b>Result:</b> <b>{result}</b>\n",
+  "USE_TABLE_FORMAT": true,
+  "TABLE_ROWS": 10,
+  "CHANNEL_ID": "@botpaymentreq",
+  "LOSS_TEMPLATE": "❌<b>Lᴏꜱꜱ</b> ❌\n\n🎉 Bᴇᴛᴛᴇʀ Lᴜᴄᴋ Nᴇxᴛ Tɪᴍᴇ! 🚀\n\n<b>Period:</b> <code>{period}</code>\n<b>Result:</b> <b>{result}</b>"
+}
