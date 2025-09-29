@@ -12,7 +12,7 @@ const CONFIG_FILE = './config.json';
 
 // Default settings - used if config.json is missing
 const defaultConfig = {
-    TOKEN: '7293372967:AAHnEkrXycJJj9fHAr9Ez0yIKwFXTpAM430', // ⚠️ PASTE YOUR BOT TOKEN HERE
+    TOKEN: '8029231296:AAGVsx51F5nipmwEtnQ-q9PMWliowriLhwo', // ⚠️ PASTE YOUR BOT TOKEN HERE
     ADMIN_USER_ID: 6484788124, // ⚠️ CHANGE THIS TO YOUR TELEGRAM USER ID
     CHANNELS: ['@botpaymentreq'], // ⚠️ This is now a list, you can add default channels here
     API_URL: 'https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json',
@@ -873,4 +873,5 @@ process.on('SIGINT', () => {
 process.on('SIGTERM', () => {
     console.log('\n[EXIT] Bot stopped by system.');
     process.exit(0);
+
 });
