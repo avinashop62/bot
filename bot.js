@@ -12,7 +12,7 @@ const CONFIG_FILE = './config.json';
 
 // Default settings - used if config.json is missing
 const defaultConfig = {
-    TOKEN: '8029231296:AAGVsx51F5nipmwEtnQ-q9PMWliowriLhwo', // ⚠️ PASTE YOUR BOT TOKEN HERE
+    TOKEN: '7293372967:AAHnEkrXycJJj9fHAr9Ez0yIKwFXTpAM430', // ⚠️ PASTE YOUR BOT TOKEN HERE
     ADMIN_USER_ID: 6484788124, // ⚠️ CHANGE THIS TO YOUR TELEGRAM USER ID
     CHANNELS: ['@botpaymentreq'], // ⚠️ This is now a list, you can add default channels here
     API_URL: 'https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json',
@@ -399,7 +399,11 @@ function getBigSmall(num) { return num <= 4 ? 'SMALL' : 'BIG'; }
 
 async function getResults() {
     const headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Referer': 'https://draw.ar-lottery01.com/',
+        'Connection': 'keep-alive'
     };
     const res = await axios.get(config.API_URL, { timeout: 10000, headers: headers });
     return res.data.data.list;
@@ -877,5 +881,4 @@ process.on('SIGINT', () => {
 process.on('SIGTERM', () => {
     console.log('\n[EXIT] Bot stopped by system.');
     process.exit(0);
-
 });

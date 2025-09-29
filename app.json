@@ -1,0 +1,43 @@
+{
+  "name": "WinGo Prediction Bot",
+  "description": "Telegram bot for WinGo lottery predictions with table format",
+  "repository": "https://github.com/your-username/wingo-bot",
+  "keywords": ["telegram", "bot", "lottery", "prediction", "wingo"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/google-chrome"
+    },
+    {
+      "url": "jontewks/puppeteer"
+    }
+  ],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram bot token from @BotFather",
+      "required": true
+    },
+    "ADMIN_USER_ID": {
+      "description": "Your Telegram user ID (numeric)",
+      "required": true
+    },
+    "BASE_PRICE": {
+      "description": "Base price for predictions (optional)",
+      "value": "10",
+      "required": false
+    },
+    "REGISTER_LINK": {
+      "description": "Registration link for users (optional)",
+      "value": "https://your-registration-link.com",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
