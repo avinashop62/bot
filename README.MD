@@ -1,94 +1,90 @@
 # WinGo Prediction Bot
 
-A Telegram bot that provides WinGo lottery predictions with beautiful table format images. The bot analyzes past results and predicts BIG/SMALL outcomes for the next period.
+Telegram bot for WinGo game predictions with admin panel.
 
 ## Features
-
-- 🎯 **Smart Predictions**: Analyzes last 10 results using advanced algorithms
-- 📊 **Table Format**: Generates beautiful prediction tables with images
-- 🔄 **Auto Multiplier**: Doubles bet amount on losses, resets on wins
-- 📢 **Multi-Channel**: Post to multiple Telegram channels
-- ⚙️ **Admin Panel**: Full control via Telegram commands
-- 🚀 **Heroku Ready**: Easy deployment with one click
-
-## Quick Deploy
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/your-username/wingo-bot)
-
-## Manual Setup
-
-### Prerequisites
-
-- Node.js 14+
-- Telegram Bot Token from [@BotFather](https://t.me/botfather)
-- Heroku Account
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/wingo-bot.git
-cd wingo-bot
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Create config.json:
-```json
-{
-  "TOKEN": "your_bot_token_here",
-  "ADMIN_USER_ID": 123456789,
-  "CHANNELS": ["@your_channel"],
-  "API_URL": "https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json",
-  "BASE_PRICE": 10,
-  "REGISTER_LINK": "https://your-link.com"
-}
-```
-
-4. Run the bot:
-```bash
-node bot.js
-```
+- Automatic predictions based on pattern analysis
+- Admin control panel
+- Table format with images
+- Multi-channel support
+- Win/Loss tracking
 
 ## Heroku Deployment
 
-Follow the detailed guide in [HEROKU_DEPLOY_GUIDE.md](HEROKU_DEPLOY_GUIDE.md)
+### Prerequisites
+1. Heroku account (free tier works)
+2. Telegram Bot Token from [@BotFather](https://t.me/botfather)
+3. Your Telegram User ID (get from [@userinfobot](https://t.me/userinfobot))
 
-## Configuration
+### Setup Steps
 
-### Environment Variables (Heroku)
+1. **Install Heroku CLI**
+   ```bash
+   # Download from: https://devcenter.heroku.com/articles/heroku-cli
+   ```
 
-- `TELEGRAM_BOT_TOKEN`: Your bot token
-- `ADMIN_USER_ID`: Your Telegram user ID
-- `BASE_PRICE`: Starting bet amount (default: 10)
-- `REGISTER_LINK`: Registration link for users
+2. **Login to Heroku**
+   ```bash
+   heroku login
+   ```
 
-### Bot Commands
+3. **Create Heroku App**
+   ```bash
+   heroku create your-bot-name
+   ```
 
-- `/admin` or `/start`: Open admin panel
-- Manage channels, templates, settings via inline keyboard
+4. **Set Environment Variables**
+   ```bash
+   heroku config:set TELEGRAM_BOT_TOKEN=your_bot_token
+   heroku config:set ADMIN_USER_ID=your_user_id
+   ```
 
-## How It Works
+5. **Deploy**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git push heroku main
+   ```
 
-1. **Data Fetching**: Gets latest WinGo results from API
-2. **Analysis**: Analyzes patterns in last 10 results
-3. **Prediction**: Predicts next BIG/SMALL outcome
-4. **Posting**: Sends prediction with table image to channels
-5. **Result Check**: Verifies result and updates multiplier
+6. **Check Logs**
+   ```bash
+   heroku logs --tail
+   ```
+
+## Local Testing
+
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+2. **Run Bot**
+   ```bash
+   node bot.js
+   ```
+
+## Admin Commands
+- `/admin` or `/start` - Open admin panel
+- Manage channels, templates, settings through inline buttons
+
+## Environment Variables
+- `TELEGRAM_BOT_TOKEN` - Your bot token
+- `ADMIN_USER_ID` - Your Telegram user ID
+- `API_URL` - (Optional) Custom API endpoint
 
 ## Troubleshooting
 
-- **403 API Error**: API may block Heroku IPs. Headers are set to mimic browser.
-- **409 Conflict**: Stop local bot instances before deploying to Heroku.
-- **Image Generation**: Ensure Puppeteer buildpacks are added on Heroku.
+### 403 Error
+If you get 403 errors, the API might be blocking Heroku IPs. Solutions:
+1. Deploy on a VPS instead
+2. Use a proxy service
+3. Contact API provider
 
-## License
-
-MIT License - feel free to use and modify.
+### Bot Not Responding
+1. Check Heroku logs: `heroku logs --tail`
+2. Verify bot token is correct
+3. Ensure bot is running: `heroku ps`
 
 ## Support
-
-For issues, check the Heroku logs or contact the developer.
+For issues, check the logs first and verify all configuration settings.
